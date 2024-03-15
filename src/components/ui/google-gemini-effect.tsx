@@ -188,7 +188,7 @@ export function GoogleGeminiEffectDemo() {
           pathLengthFourth,
           pathLengthFifth,
         ]}
-        title="Vamos ser Substituidos?"
+        title="Vamos ser Substituídos?"
         description="Explorar este tema é essencial para vislumbrarmos o futuro."
       />
     </div>
