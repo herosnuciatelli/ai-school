@@ -19,6 +19,8 @@ export const GoogleGeminiEffect = ({
   description?: string;
   className?: string;
 }) => {
+  const canvaLink = `https://www.canva.com/design/DAF-wgszD38/xCoSVuU8cmNjDu0S8_EeYg/edit?utm_content=DAF-wgszD38&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton`
+
   return (
     <div className={cn("sticky top-80", className)}>
       <p className="text-lg md:text-7xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
@@ -29,10 +31,10 @@ export const GoogleGeminiEffect = ({
           `Scroll this component and see the bottom SVG come to life wow this
         works!`}
       </p>
-      <div className="w-full h-[890px] -top-50 md:-top-36 grid place-items-center bg-red-transparent absolute ">
-        <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">
-          Acessar os Slides
-        </button>
+      <div className="w-full h-[890px] -top-56 md:-top-24 grid place-items-center bg-red-transparent absolute ">
+        <a href={canvaLink} className="cursor-pointer relative z-10">
+          <Button >Acessar Slides</Button>
+        </a>
       </div>
       <svg
         width="1440"
@@ -161,6 +163,7 @@ export const GoogleGeminiEffect = ({
 };
 
 import { useScroll, useTransform } from "framer-motion";
+import { Button } from "./moving-border";
 
 export function GoogleGeminiEffectDemo() {
   const ref = React.useRef(null);
@@ -177,7 +180,7 @@ export function GoogleGeminiEffectDemo() {
 
   return (
     <div
-      className="h-[400vh] bg-slate-950 w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
+      className="h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
       ref={ref}
     >
       <GoogleGeminiEffect
